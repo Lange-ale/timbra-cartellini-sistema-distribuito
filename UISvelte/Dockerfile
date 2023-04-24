@@ -1,12 +1,13 @@
-FROM node:16-alpine3.16 AS build
+FROM node:lts-alpine as build 
 
 WORKDIR /app
-
-COPY package.json ./
-COPY package-lock.json ./
+COPY . .
 RUN npm install
-COPY . ./
 RUN npm run build
 
-FROM nginx:1.19-alpine
-COPY --from=build /app/public /usr/share/nginx/html
+FROM nginx:stable-alpine AS deploy-static
+
+WORKDIR /usr/share/nginx/html
+RUN rm -rf ./*
+COPY --from=build /app/build .
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
