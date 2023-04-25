@@ -1,6 +1,19 @@
 version: '3.9'
 services:
-  web:
-    build: ./UISvelte
+  db:  
+    image: postgres:15-alpine
+    restart: always
     ports:
-      - 8000:80
+      - 54320:5432
+    environment:
+      POSTGRES_USER: example
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: example
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+      
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
