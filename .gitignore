@@ -1,0 +1,4 @@
+pgdata/
+__pycache__/
+
+RestAPI/config.py
