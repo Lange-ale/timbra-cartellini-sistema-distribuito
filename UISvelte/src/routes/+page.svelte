@@ -15,12 +15,12 @@ function toggle(){
 }
 </script>
 
-<main class="min-h-screen" style="background-color: pink;">
+<main class="min-h-screen" style="background-color: rgb(30 41 59);">
   <div class="hero">
     <div class="hero-body">
-      <h1>TIMBRA CARTELLINI</h1>
+      <h1 class="text-white text-5xl">TIMBRA CARTELLINI</h1>
 
-      <p>
+      <p class="text-white">
         Inserisci il numero di matricola
       </p>
 
@@ -30,7 +30,7 @@ function toggle(){
         LogIn
       </button>
 
-      <p> {$matricola} </p>
+      <p class="text-white"> {$matricola} </p>
     </div>
   </div>
 </main>
