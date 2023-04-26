@@ -1,5 +1,8 @@
 import { writable } from 'svelte/store'
 
-export const login = writable(0)
-export const matricola = writable(1)
+export const auth_token = writable('')
+export const email = writable('')
+export const password_inserted = writable('')
+export const name = writable('')
+export const surname = writable('')
 
