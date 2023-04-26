@@ -1,4 +1,5 @@
-from config import firebase_config, db_config, accounts
+from config import firebase_config, db_config
+from accounts import accounts
 
 # before running this script run "docker-compose up --build" to start the database
 # and run "pip install -r requirements.txt" to install the required packages
@@ -41,6 +42,7 @@ else:
             email VARCHAR(255) NOT NULL UNIQUE,
             name VARCHAR(255) NOT NULL,
             surname VARCHAR(255) NOT NULL
+        
         )""" 
     )
     

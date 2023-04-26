@@ -16,16 +16,3 @@ db_config = {
     "password": "example",
     "port": 54320
 }
-
-accounts = {
-    "example@domain.com": {
-        "name": "example",
-        "surname": "example",
-        "password": "example"
-    },
-    "john@doe.com": {
-        "name": "john",
-        "surname": "doe",
-        "password": "johndoe"
-    }   
-}
