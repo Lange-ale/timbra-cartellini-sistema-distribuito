@@ -1,6 +1,7 @@
 version: '3.9'
 services:
   db:  
+    container_name: timbra-db
     image: postgres:15-alpine
     restart: always
     ports:
@@ -13,6 +14,7 @@ services:
       - ./pgdata:/var/lib/postgresql/data
       
   adminer:
+    container_name: timbra-db-adminer
     image: adminer
     restart: always
     ports:

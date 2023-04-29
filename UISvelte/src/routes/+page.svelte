@@ -41,6 +41,7 @@ async function set_worker_data(){
   .then(data => {
     name.set(data.name)
     surname.set(data.surname)
+    console.log(data)
   })
 }
 
@@ -67,7 +68,7 @@ async function get_worker_data(){
       </p>
 
       <p>
-        <input type="text" placeholder="Matricola" bind:value={$email} />
+        <input type="text" placeholder="Email" bind:value={$email} />
         <input type="password" placeholder="Password" bind:value={$password_inserted} />
       <button class="btn btn-primary" on:click={get_worker_data}>
         LogIn

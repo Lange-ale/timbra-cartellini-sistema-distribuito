@@ -49,8 +49,8 @@ def get_worker():
     email = request.user['email']
     worker = worker_repository.get_by_email(email)
     if worker is None:
-        return 'Worker not found', 404
-    return worker
+        return {'error': 'Worker not found'}, 404
+    return worker.__dict__, 200
 
 
 
