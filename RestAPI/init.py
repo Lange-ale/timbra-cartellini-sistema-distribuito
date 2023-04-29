@@ -35,6 +35,7 @@ else:
     cur = conn.cursor()
 
     cur.execute('CREATE EXTENSION IF NOT EXISTS "uuid-ossp"')
+    cur.execute('DROP TABLE IF EXISTS logs')
     cur.execute('DROP TABLE IF EXISTS workers')
     cur.execute(
         """ CREATE TABLE workers (
@@ -52,7 +53,6 @@ else:
                         VALUES ('{account['uuid']}', '{email}', '{account['name']}', '{account['surname']}', 
                         '{account['entrance_time']}', '{account['exit_time']}')""")
                     
-    cur.execute('DROP TABLE IF EXISTS logs')
     cur.execute(
         """ CREATE TABLE logs (
             uuid VARCHAR(255) PRIMARY KEY DEFAULT uuid_generate_v4(),
