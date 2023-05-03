@@ -1,6 +1,11 @@
-# Timbra Cartellini 📑
-Questo progetto consiste in una sistema distribuito costruito su Docker per la gestione di ingressi e uscite all'interno di un'azienda
+# Sistema Distribuito: Timbra Cartellini 📑
+Questo progetto consiste in un sistema distribuito costruito con Flask e Svelte per la gestione di ingressi e uscite all'interno di un'azienda.
 
-Alessio Langellotti
-Pamela Loda
-Giacomo Garoffoli
+**Cartelle**
+- UISvelte - Frontend costruito in SvelteJS + TailwindCSS
+- RestAPI - Backend costruito in Flask
+
+**Autori**
+- Alessio Langellotti
+- Pamela Loda
+- Giacomo Garoffoli
