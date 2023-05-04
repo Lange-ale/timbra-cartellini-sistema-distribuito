@@ -5,7 +5,7 @@ services:
     image: postgres:15-alpine
     restart: always
     ports:
-      - 54320:5432
+      - 5432:5432
     environment:
       POSTGRES_USER: example
       POSTGRES_PASSWORD: example
@@ -19,3 +19,15 @@ services:
     restart: always
     ports:
       - 8080:8080
+
+  rest-api:
+    container_name: timbra-rest-api 
+    network_mode: host
+    build: ./RestAPI
+    restart: always
+    ports:
+      - 5000:5000
+    depends_on:
+      - db
+  
+  
