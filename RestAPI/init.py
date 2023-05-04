@@ -7,7 +7,7 @@ from fake_data import accounts, logs
 print("Do you want to create the accounts on firebase? (y/n)")
 answer = input()
 if answer.lower() != "y":
-    print("The accounts will not be created on firebase")
+    print("The accountsw will not be created on firebase")
 else:
     import pyrebase
     
@@ -57,8 +57,8 @@ else:
         """ CREATE TABLE logs (
             uuid VARCHAR(255) PRIMARY KEY DEFAULT uuid_generate_v4(),
             date DATE NOT NULL,
-            clock_in TIME NOT NULL,
-            clock_out TIME NOT NULL,
+            time TIME NOT NULL,
+            is_entry BOOLEAN NOT NULL,    
             uuid_worker VARCHAR(255) NOT NULL,
             
             CONSTRAINT fk_worker
@@ -69,8 +69,8 @@ else:
     )
     
     for uuid, log in logs.items():
-        cur.execute(f"""INSERT INTO logs (uuid, date, clock_in, clock_out, uuid_worker) 
-                        VALUES ('{uuid}', '{log['date']}', '{log['clock_in']}', '{log['clock_out']}', 
-                        '{log['uuid_worker']}')""")
+        cur.execute(f"""INSERT INTO logs (uuid, date, time, is_entry, uuid_worker)  
+                        VALUES ('{uuid}', '{log['date']}', '{log['time']}', '{log['is_entry']}', '{log['uuid_worker']}')""")
+            
     
     conn.commit()

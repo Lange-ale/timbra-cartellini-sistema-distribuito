@@ -20,6 +20,8 @@ class WorkerRepository:
     def __init__(self, conn):
         self.conn = conn
         self.cur = conn.cursor()
+
+        
         
     def get_by_email(self, email):
         self.cur.execute("SELECT * FROM workers WHERE email = %s", (email,))
