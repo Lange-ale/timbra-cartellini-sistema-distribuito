@@ -6,6 +6,7 @@ Questo progetto consiste in un sistema distribuito costruito con Flask e Svelte 
 - Flask
 - Firebase auth
 - Svelte
+- Docker e docker-compose
 
 
 **Cartelle**
