@@ -9,7 +9,11 @@
     <div class="flex-none">
         <a href="/" class="btn btn-ghost text-xl"> TIMBRA CARTELLINI </a>
     </div>
-    
+    {#if $admin_role}
+        <div class="flex-none">
+            <a href="/admin" class="btn btn-ghost text-xl"> Admin </a>
+        </div>
+    {/if}
     <div class="flex-1"></div>
     {#if $auth_token}
         <div class="flex-none">

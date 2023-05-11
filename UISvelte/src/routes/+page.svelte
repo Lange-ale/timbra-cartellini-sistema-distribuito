@@ -140,13 +140,14 @@
     }
 </script>
 
-<main class="text-white">
-    <div class="hero">
-        <div class="hero-content flex-col">
+<main class="text-white min-h-1000">
+    
             
             <br> <br> <br>
             
             {#if $auth_token == null}
+            <div class="hero">
+                <div class="hero-content flex-col">
                 <h1 class="text-white text-5xl" style="text-align: center;"><b>LOG IN</b></h1>
 
                 <br>
@@ -174,7 +175,11 @@
                         </div>
                     </div>
                 </div>
+                </div>
+            </div>
             {:else}
+            <div class="flex flex-col w-full lg:flex-row">
+                <div class="grid flex-grow place-items-center">
                 <div class="title text-9xl text-center p-5">
                     { actual_time }
                 </div>
@@ -187,14 +192,14 @@
                 
                 {#if user_action==null}
                     {#if $last_is_an_entry == null}
-                        <button class="btn loading min-w-full"> Loading... </button>
+                        <button class="btn loading"> Loading... </button>
                     {:else if $last_is_an_entry}
-                        <button class="btn btn-error min-w-full"
+                        <button class="btn btn-error"
                             on:click={ () => { user_action = "button pressed" }, 
                                        timbra 
                                      }> Timbra uscita </button>
                     {:else}
-                        <button class="btn btn-success min-w-full"  
+                        <button class="btn btn-success"  
                             on:click={ () => { user_action = "button pressed" }, 
                                        timbra 
                                      }> Timbra entrata </button>
@@ -204,6 +209,11 @@
                 {:else}
                     <p class="text-2xl text-center p-5"> {user_action} </p>
                 {/if}
+
+            </div>
+
+
+            <div class="grid flex-grow place-items-center">
 
                 {#if $logs != null}
                     <div class="border border-white rounded-lg p-1">
@@ -241,7 +251,8 @@
                         </table>
                     </div>
                 {/if}
+
+                </div>
+                </div>                
             {/if}
-        </div>  
-    </div>
 </main>

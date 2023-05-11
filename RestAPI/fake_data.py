@@ -53,7 +53,7 @@ logs = {
     "b09edaed-9498-4c41-b877-90534f8c7d2d": {
         "uuid_worker": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a13",
         "date": "2021-01-01",
-        "time": "08:00:01.001",
+        "time": "07:59:59.001",
         "is_entry": True
     },
     "b09edaed-9498-4c41-b877-90534f8c7d2e": {
@@ -101,7 +101,7 @@ logs = {
     "b09edaed-9498-4c41-b877-90534f8c7d2l": {
         "uuid_worker": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a13",
         "date": "2021-01-02",
-        "time": "08:00:01.001", 
+        "time": "07:57:59.001", 
         "is_entry": True
     },
     "b09edaed-9498-4c41-b877-90534f8c7d2m": {   
