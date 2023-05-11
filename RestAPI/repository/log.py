@@ -1,4 +1,6 @@
 from datetime import datetime
+from os import environ
+environ['TZ'] = 'Europe/Rome'
 
 class Log:
     def __init__(self, uuid, date, time, is_entry, uuid_worker):
@@ -35,6 +37,7 @@ class LogRepository:
         return log[0]
         
     def insert(self, uuid_worker, is_entry):
+        #set the it to the current date and time
         date = datetime.today().strftime('%Y-%m-%d')
         time = datetime.today().strftime('%H:%M:%S.%f')[:-3]
         self.cur.execute("INSERT INTO logs (date, time, is_entry, uuid_worker) VALUES (%s, %s, %s, %s) RETURNING *", (date, time, is_entry, uuid_worker))

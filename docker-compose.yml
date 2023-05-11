@@ -30,4 +30,14 @@ services:
     depends_on:
       - db
   
+  web-app:
+    container_name: timbra-web-app
+    build: 
+      context: ./UISvelte
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8081:80
+    depends_on:
+      - rest-api
   

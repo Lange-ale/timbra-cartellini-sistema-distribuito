@@ -8,6 +8,8 @@ import pyrebase
 from functools import wraps
 from time import sleep
     
+
+
 app = Flask(__name__)
 app.secret_key = "secret key"
 CORS(app)
@@ -48,11 +50,14 @@ def token_required(f):
 def get_token(): 
     email = request.json['email']
     password = request.json['password']
+    print(request.json)
     try:
         user = auth.sign_in_with_email_and_password(email, password)
         token = user['idToken']
-        return {'token': token}, 200
+        uuid_worker = worker_repository.get_by_email(email) .uuid
+        return {'token': token, 'uuid_worker': uuid_worker}, 200
     except Exception as e:
+        print(e)
         return {'error': str(e)}, 400
     
     

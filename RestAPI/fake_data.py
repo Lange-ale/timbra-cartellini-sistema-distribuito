@@ -1,35 +1,39 @@
 accounts = {
-    "pippo@ferrari.com": {
-        "name": "pippo",
-        "surname": "pluto",
+    "pippo.plutto@ferrari.com": {
+        "name": "Pippo",
+        "surname": "Pluto",
         "password": "pippopluto",
         "uuid": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
         "entrance_time": "08:00:00.001",
-        "exit_time": "16:00:00.001"
+        "exit_time": "16:00:00.001",
+        "is_admin": False
     },
-    "laura@ferrari.com": {
-        "name": "laura",
-        "surname": "giorgio",
+    "laura.dinatale@ferrari.com": {
+        "name": "Laura",
+        "surname": "Giorgio",
         "password": "giorgio",
         "uuid": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a12",
         "entrance_time": "08:00:00.001",
-        "exit_time": "16:00:00.001"        
+        "exit_time": "16:00:00.001",
+        "is_admin": False
     },
-    "loda@ferrari.com": {
-        "name": "pamela",
-        "surname": "loda",
+    "pamela.loda@ferrari.com": {
+        "name": "Pamela",
+        "surname": "Loda",
         "password": "pamela",
         "uuid": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a13",
         "entrance_time": "08:00:00.001",
-        "exit_time": "16:00:00.001"
+        "exit_time": "16:00:00.001",
+        "is_admin": True
     },
-    "giacomo@ferrari.com": {
-        "name": "giacomo",
-        "surname": "garoffola",
+    "giacomo.garoffoli@ferrari.com": {
+        "name": "Giacomo",
+        "surname": "Garoffola",
         "password": "garoffola",
         "uuid": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a14",
         "entrance_time": "08:00:00.001",
-        "exit_time": "16:00:00.001"
+        "exit_time": "16:00:00.001",
+        "is_admin": False
     },
 }
 

@@ -44,14 +44,15 @@ else:
             name VARCHAR(255) NOT NULL,
             surname VARCHAR(255) NOT NULL,
             entrance_time TIME NOT NULL,
-            exit_time TIME NOT NULL
+            exit_time TIME NOT NULL,
+            is_admin BOOLEAN NOT NULL DEFAULT FALSE
         )""" 
     )
     
     for email, account in accounts.items():
-        cur.execute(f"""INSERT INTO workers (uuid, email, name, surname, entrance_time, exit_time) 
+        cur.execute(f"""INSERT INTO workers (uuid, email, name, surname, entrance_time, exit_time, is_admin)
                         VALUES ('{account['uuid']}', '{email}', '{account['name']}', '{account['surname']}', 
-                        '{account['entrance_time']}', '{account['exit_time']}')""")
+                        '{account['entrance_time']}', '{account['exit_time']}', '{account['is_admin']}')""")
                     
     cur.execute(
         """ CREATE TABLE logs (
